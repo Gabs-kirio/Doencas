@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* CAPA */
+.capa {
+    height: 100vh;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+    padding: 20px;
+}
+
+.capa h1 {
+    text-align: center;
+}
+
+.conteudo-capa {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.conteudo-capa img {
+    width: 150px;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.conteudo-capa p {
+    max-width: 300px;
+}
+
+/* DOENÇAS */
+.doencas {
+    padding: 40px;
+    background-color: #f4f4f4;
+}
+
+.doenca {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.texto {
+    display: none;
+    margin-top: 10px;
+}
+
+/* RODAPÉ */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
