@@ -6,9 +6,10 @@ body {
 /* CAPA */
 .capa {
     height: 100vh;
-    background: linear-gradient(to right, #1e3c72, #2a5298);
+    background: linear-gradient(to right, #0a1f44, #1e3c72, #4ea8de);
     color: white;
     padding: 20px;
+    position: relative;
 }
 
 .capa h1 {
@@ -45,6 +46,14 @@ body {
 button {
     padding: 10px;
     cursor: pointer;
+    border: none;
+    background-color: #1e3c72;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #16325c;
 }
 
 .texto {
