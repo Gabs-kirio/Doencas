@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial;
 }
 
 /* CAPA */
@@ -8,12 +8,8 @@ body {
     height: 100vh;
     background: linear-gradient(to right, #0a1f44, #1e3c72, #4ea8de);
     color: white;
-    padding: 20px;
     position: relative;
-}
-
-.capa h1 {
-    text-align: center;
+    padding: 20px;
 }
 
 .conteudo-capa {
@@ -25,46 +21,61 @@ body {
 .conteudo-capa img {
     width: 150px;
     border-radius: 10px;
-    display: block;
-    margin-bottom: 10px;
 }
 
-.conteudo-capa p {
-    max-width: 300px;
-}
-
-/* DOENÇAS */
-.doencas {
-    padding: 40px;
-    background-color: #f4f4f4;
-}
-
-.doenca {
-    margin-bottom: 20px;
+/* CONTROLE */
+.controle {
+    padding: 30px;
+    background: #f4f4f4;
 }
 
 button {
-    padding: 20px;
+    padding: 10px;
+    margin: 5px;
     cursor: pointer;
     border: none;
-    background-color: #1e3c72;
+    background: #1e3c72;
     color: white;
     border-radius: 5px;
 }
 
 button:hover {
-    background-color: #16325c;
+    background: #16325c;
 }
 
-.texto {
+input, select {
+    padding: 10px;
+    margin: 10px 5px;
+}
+
+/* LISTA */
+#lista-doencas button {
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+/* MODAL */
+.modal {
     display: none;
-    margin-top: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
 }
 
-/* RODAPÉ */
-footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
+.modal-conteudo {
+    background: white;
+    margin: 10% auto;
     padding: 20px;
+    width: 60%;
+    border-radius: 10px;
+}
+
+.fechar {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
 }
