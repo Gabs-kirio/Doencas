@@ -7,47 +7,53 @@
 </head>
 <body>
 
-    <!-- CAPA -->
-    <header class="capa">
-        <h1>Projeto Doenças</h1>
+<header class="capa">
+    <h1>Projeto Doenças</h1>
 
-        <div class="conteudo-capa">
-            <img src="sua-foto.jpg" alt="Minha foto">
+    <div class="conteudo-capa">
+        <img src="sua-foto.jpg">
+        <p>
+            Este site apresenta doenças, suas causas, sintomas, prevenção e tratamento.
+        </p>
+    </div>
+</header>
 
-            <p>
-                Este site tem como objetivo apresentar informações sobre diversas doenças,
-                abordando sua história, formas de prevenção, combate e sintomas.
-            </p>
-        </div>
-    </header>
+<section class="controle">
 
-    <!-- LISTA DE DOENÇAS -->
-    <section class="doencas">
+    <div class="botoes-principais">
+        <button onclick="mostrarCategoria('infecciosas')">Infecciosas</button>
+        <button onclick="mostrarCategoria('nao')">Não Infecciosas</button>
+    </div>
 
-        <div class="doenca">
-            <button onclick="toggleTexto(0)">Doença 1</button>
-            <p class="texto">Texto explicando a doença 1...</p>
-        </div>
+    <input type="text" id="pesquisa" placeholder="Pesquisar doença..." oninput="filtrar()">
 
-        <div class="doenca">
-            <button onclick="toggleTexto(1)">Doença 2</button>
-            <p class="texto">Texto explicando a doença 2...</p>
-        </div>
+    <select id="filtro" onchange="filtrar()">
+        <option value="">Filtrar por categoria</option>
+        <option value="virose">Virose</option>
+        <option value="bacteriose">Bacteriose</option>
+        <option value="metabolica">Metabólica</option>
+        <option value="cardiovascular">Cardiovascular</option>
+    </select>
 
-        <div class="doenca">
-            <button onclick="toggleTexto(2)">Doença 3</button>
-            <p class="texto">Texto explicando a doença 3...</p>
-        </div>
+    <div id="lista-doencas"></div>
 
-    </section>
+</section>
 
-    <!-- RODAPÉ -->
-    <footer>
-        <p>Telefone: (31) 97101-6546</p>
-        <p>Email: gabriel.iv1602@gmail.com</p>
-        <p>"Enquanto herdarmos a ciência a humanidade nunca morrerá"</p>
-    </footer>
+<!-- MODAL -->
+<div id="modal" class="modal">
+    <div class="modal-conteudo">
+        <span onclick="fecharModal()" class="fechar">&times;</span>
+        <h2 id="titulo"></h2>
+        <p id="descricao"></p>
+    </div>
+</div>
 
-    <script src="script.js"></script>
+<footer>
+    <p>(00) 00000-0000</p>
+    <p>exemplo@email.com</p>
+    <p>"Enquanto herdarmos a ciência, a humanidade nunca morrerá"</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
