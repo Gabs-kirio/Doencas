@@ -1,81 +1,71 @@
-body {
-    margin: 0;
-    font-family: Arial;
-}
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
 
-/* CAPA */
-.capa {
-    height: 100vh;
-    background: linear-gradient(to right, #0a1f44, #1e3c72, #4ea8de);
-    color: white;
-    position: relative;
-    padding: 20px;
-}
+    /* CAPA */
+    .capa {
+        height: auto;
+        padding: 20px 10px;
+    }
 
-.conteudo-capa {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-}
+    .capa h1 {
+        font-size: 24px;
+    }
 
-.conteudo-capa img {
-    width: 150px;
-    border-radius: 10px;
-}
+    .conteudo-capa {
+        position: static;
+        margin-top: 20px;
+        text-align: center;
+    }
 
-/* CONTROLE */
-.controle {
-    padding: 30px;
-    background: #f4f4f4;
-}
+    .conteudo-capa img {
+        width: 120px;
+        margin: 0 auto 10px;
+    }
 
-button {
-    padding: 10px;
-    margin: 5px;
-    cursor: pointer;
-    border: none;
-    background: #1e3c72;
-    color: white;
-    border-radius: 5px;
-}
+    .conteudo-capa p {
+        max-width: 100%;
+        font-size: 14px;
+    }
 
-button:hover {
-    background: #16325c;
-}
+    /* CONTROLE */
+    .controle {
+        padding: 20px 10px;
+    }
 
-input, select {
-    padding: 10px;
-    margin: 10px 5px;
-}
+    .botoes-principais {
+        display: flex;
+        flex-direction: column;
+    }
 
-/* LISTA */
-#lista-doencas button {
-    display: block;
-    width: 100%;
-    text-align: left;
-}
+    button {
+        width: 100%;
+        font-size: 16px;
+    }
 
-/* MODAL */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.7);
-}
+    input, select {
+        width: 100%;
+        box-sizing: border-box;
+    }
 
-.modal-conteudo {
-    background: white;
-    margin: 10% auto;
-    padding: 20px;
-    width: 60%;
-    border-radius: 10px;
-}
+    /* LISTA */
+    #lista-doencas button {
+        font-size: 15px;
+    }
 
-.fechar {
-    float: right;
-    cursor: pointer;
-    font-size: 20px;
+    /* DETALHES */
+    .detalhes {
+        padding: 15px;
+    }
+
+    /* MODAL (se ainda usar) */
+    .modal-conteudo {
+        width: 90%;
+        margin: 20% auto;
+    }
+
+    /* RODAPÉ */
+    footer {
+        font-size: 14px;
+        padding: 15px;
+    }
 }
