@@ -23,6 +23,12 @@ const doencas = [
         tag: "cardiovascular",
         descricao: "Pressão arterial elevada."
     }
+    {
+        nome: "Cancêr de próstata",
+        tipo: "nao",
+        tag: "Câncer",
+        descricao: "É o tipo de câncer mais comum em homens com mais de 50 anos. Os sintomas podem incluir dificuldade para urinar, sensação de liberação incompleta da bexiga ao urinar e uma necessidade muito frequente de urinar."
+    }
 ];
 
 let categoriaAtual = "";
