@@ -1,59 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Doenças</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header class="capa">
-    <h1>Projeto Doenças</h1>
+    <!-- CAPA -->
+    <header class="capa">
 
-    <div class="conteudo-capa">
-        <img src="sua-foto.jpg">
+        <h1>Projeto Doenças</h1>
+
+        <div class="conteudo-capa">
+            <img src="sua-foto.jpg" alt="Minha Foto">
+
+            <p>
+                Este site apresenta informações sobre diversas doenças,
+                abordando sua história, causas, sintomas, formas de prevenção
+                e tratamentos, promovendo conhecimento e conscientização.
+            </p>
+        </div>
+
+    </header>
+
+    <!-- CONTEÚDO -->
+    <section class="controle">
+
+        <div class="botoes-principais">
+            <button onclick="mostrarCategoria('infecciosas')">
+                Doenças Infecciosas
+            </button>
+
+            <button onclick="mostrarCategoria('nao')">
+                Doenças Não Infecciosas
+            </button>
+        </div>
+
+        <input
+            type="text"
+            id="pesquisa"
+            placeholder="Pesquisar doença..."
+            oninput="filtrar()">
+
+        <select id="filtro" onchange="filtrar()">
+            <option value="">Todas as categorias</option>
+
+            <option value="virose">Virose</option>
+            <option value="bacteriose">Bacteriose</option>
+            <option value="micose">Micose</option>
+            <option value="parasitose">Parasitose</option>
+
+            <option value="metabolica">Metabólica</option>
+            <option value="cardiovascular">Cardiovascular</option>
+            <option value="neurodegenerativa">Neurodegenerativa</option>
+            <option value="cancer">Câncer</option>
+        </select>
+
+        <div id="lista-doencas"></div>
+
+        <!-- CONTAINER DE INFORMAÇÕES -->
+        <div id="detalhes" class="detalhes">
+
+            <h2 id="titulo"></h2>
+
+            <div id="tag-doenca"></div>
+
+            <p id="descricao"></p>
+
+        </div>
+
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <p>Telefone: (00) 00000-0000</p>
+
+        <p>Email: exemplo@email.com</p>
+
         <p>
-            Este site apresenta doenças, suas causas, sintomas, prevenção e tratamento.
+            "Enquanto herdarmos a ciência a humanidade nunca morrerá"
         </p>
-    </div>
-</header>
 
-<section class="controle">
+    </footer>
 
-    <div class="botoes-principais">
-        <button onclick="mostrarCategoria('infecciosas')">Infecciosas</button>
-        <button onclick="mostrarCategoria('nao')">Não Infecciosas</button>
-    </div>
+    <script src="script.js"></script>
 
-    <input type="text" id="pesquisa" placeholder="Pesquisar doença..." oninput="filtrar()">
-
-    <select id="filtro" onchange="filtrar()">
-        <option value="">Filtrar por categoria</option>
-        <option value="virose">Virose</option>
-        <option value="bacteriose">Bacteriose</option>
-        <option value="metabolica">Metabólica</option>
-        <option value="cardiovascular">Cardiovascular</option>
-    </select>
-
-    <div id="lista-doencas"></div>
-
-</section>
-
-<!-- MODAL -->
-<div id="modal" class="modal">
-    <div class="modal-conteudo">
-        <span onclick="fecharModal()" class="fechar">&times;</span>
-        <h2 id="titulo"></h2>
-        <p id="descricao"></p>
-    </div>
-</div>
-
-<footer>
-    <p>(00) 00000-0000</p>
-    <p>exemplo@email.com</p>
-    <p>"Enquanto herdarmos a ciência, a humanidade nunca morrerá"</p>
-</footer>
-
-<script src="script.js"></script>
 </body>
+
 </html>
